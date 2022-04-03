@@ -1,0 +1,92 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+//869
+
+//int main()
+//{
+//	ifstream File("input.txt");
+//	ofstream FileOut("output.txt");
+//	int n, d, numbers = 0;
+//	bool b = 1, t = 1;
+//	File >> n >> d;
+//	vector <int> masses;
+//	while (!File.eof())
+//	{
+//		int x;
+//		File >> x;
+//		masses.push_back(x);
+//	}
+//	sort(masses.begin(), masses.end());
+//	while (b)
+//	{
+//		t = true;
+//		for (int i = masses.size() - 1; i > 0; --i)
+//		{
+//			if (masses[i] + masses[0] <= d)
+//			{
+//				masses.erase(masses.begin());
+//				i--;
+//				masses.erase(masses.begin() + i);
+//				numbers++;
+//				t = false;
+//			}
+//		}
+//		if (masses.size() < 2 || t)
+//			b = false;
+//	}
+//	if (!masses.empty())
+//		numbers += masses.size();
+//	cout << numbers << endl;
+//	FileOut << numbers;
+//	File.close();
+//	FileOut.close();
+//}
+
+//245
+
+//int main()
+//{
+//	ifstream File("input.txt");
+//	ofstream FileOut("output.txt");
+//
+//	vector <int> a;
+//	int n;
+//	File >> n;
+//	while (!File.eof())
+//	{
+//		int x;
+//		File >> x;
+//		a.push_back(x);
+//	}
+//	sort(a.begin(), a.end());
+//	int sum = 0, best = 0, i = 0, j = 1;
+//	while (j < a.size())
+//	{
+//		sum = 0;
+//		for (int k = i; k < j; k++)
+//			sum += a.at(k);
+//		if (a.at(j) <= (a.at(i) + a.at(i + 1)))
+//		{
+//			sum += a.at(j);
+//			j++;
+//			if (sum > best)
+//				best = sum;
+//		}
+//		else
+//		{
+//			sum -= a.at(i);
+//			i++;
+//			if (sum > best)
+//				best = sum;
+//		}		
+//	}
+//	cout << best;
+//	FileOut << best;
+//	File.close();
+//	FileOut.close();
+//}
